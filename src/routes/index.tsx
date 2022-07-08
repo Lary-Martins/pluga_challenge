@@ -1,11 +1,11 @@
 import { Route, Routes, BrowserRouter, Navigate } from 'react-router-dom';
-import App from '../App';
+import Home from '../pages/Home';
 
 const RouteMap= () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element= { <App /> } />
+        <Route path="/" element= { <Home /> } />
         <Route path="*" element= { <Navigate to="/" /> } />
       </Routes>
     </BrowserRouter>
