@@ -1,12 +1,12 @@
 import ToolTypes from "../types/ToolTypes"
 
-const Card = (props: ToolTypes) => {
+const Card = (tool: ToolTypes) => {
   return (
     <div>
-      <span>{props.name}</span>
+      <span>{tool.name}</span>
       <img
-          src={ props.icon }
-          alt={ props.name }
+          src={ tool.icon }
+          alt={ tool.name }
       />
     </div>
   )
