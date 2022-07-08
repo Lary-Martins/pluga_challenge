@@ -16,4 +16,12 @@ describe('Verifica se na renderização do app contém:', () => {
 
     expect(searchBar).toBeInTheDocument();
   });
+
+  test('Dois botões de paginação', () => {
+    const nextPage = screen.getByTestId('next-page');
+    const prevPage = screen.getByTestId('prev-page');
+
+    expect(nextPage).toBeInTheDocument();
+    expect(prevPage).toBeInTheDocument();
+  });
 });
