@@ -1,7 +1,13 @@
 import MainHomePage from "../components/MainHomePage";
+import SearchBar from "../components/SearchBar";
 
 const Home = () => {
-  return <MainHomePage />
+  return (
+    <main>
+      <SearchBar />
+      <MainHomePage />
+    </main>
+  )
 }
 
 export default Home;
