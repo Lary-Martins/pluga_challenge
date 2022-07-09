@@ -17,7 +17,7 @@ const MainHomePage = () => {
   return (
     <section>
       { 
-        tools.map((tool: ToolTypes, index: number) => (
+        tools.map((tool: ToolTypes, _index: number) => (
           <Card { ...tool } />
         )) 
       }
