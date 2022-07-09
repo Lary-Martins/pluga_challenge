@@ -13,8 +13,12 @@ describe('Verifica se na renderização do app contém:', () => {
 
   test('Barra de busca', () => {
     const searchBar = screen.getByTestId('tool-search');
+    const inputTextSearch = screen.getByTestId('tool-search-input');
+    const buttonSearch = screen.getByTestId('tool-search-button')
 
     expect(searchBar).toBeInTheDocument();
+    expect(inputTextSearch).toBeInTheDocument();
+    expect(buttonSearch).toBeInTheDocument();
   });
 
   test('Dois botões de paginação', () => {
