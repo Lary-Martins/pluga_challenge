@@ -41,6 +41,20 @@ const MyProvider = ({ children }: MyProviderTypes) => {
     const currentItems = toolsData.slice(startIndex, endIndex);
     setTools(currentItems);
   }, [currentPage, setTools, toolsData, itemsPerPage]);
+
+  const context = {
+    nameTool,
+    setNameTool,
+    tools,
+    toolsData,
+    setTools,
+    itemsPerPage,
+    currentPage,
+    setCurrentPage,
+    pages,
+  };
+  
+  return <MyContext.Provider value={context}>{children}</MyContext.Provider>;
 };
 
 export default MyProvider;
