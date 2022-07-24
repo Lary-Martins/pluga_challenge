@@ -8,11 +8,15 @@ const MyProvider = ({ children }: MyProviderTypes) => {
   const [nameTool, setNameTool] = useState<string>("");
   const [toolsData, setToolsData] = useState<ToolTypes[] | []>([]);
   const [tools, setTools] = useState<ToolTypes[] | []>([]);
+  const [currentPage, setCurrentPage] = useState<number>(0);
+  const [itemsPerPage] = useState<number>(12);
+  const [pages, setPages] = useState<number>(0);
 
   useEffect(() => {
     async function getData() {
       const result = await getTools();
       setToolsData(result);
+      setTools(result.slice(13));
     }
     getData();
   }, []);
@@ -29,13 +33,14 @@ const MyProvider = ({ children }: MyProviderTypes) => {
     setTools(filteredTools);
   }, [nameTool, toolsData]);
 
-  return (
-    <MyContext.Provider
-      value={{ nameTool, setNameTool, tools, toolsData, setTools }}
-    >
-      {children}
-    </MyContext.Provider>
-  );
+  useEffect(() => {
+    setPages(Math.ceil(toolsData.length / itemsPerPage));
+
+    const startIndex = currentPage * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const currentItems = toolsData.slice(startIndex, endIndex);
+    setTools(currentItems);
+  }, [currentPage, setTools, toolsData, itemsPerPage]);
 };
 
 export default MyProvider;
