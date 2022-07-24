@@ -1,36 +1,21 @@
-import { useState } from "react";
+import { useContext } from "react";
+import MyContext from "../context/MyContext";
 
 const SearchBar = () => {
-  const [searchTitle, setSearchTitle] = useState <string>('');
-
-  const handleChangeInput = (value: string) => {
-    setSearchTitle(value);
-  }
-
-  const handleClick = (value: string) => {
-    console.log(value)
-  }
+  const { nameTool, setNameTool } = useContext(MyContext);
 
   return (
-    <header data-testid="tool-search">
-      <label>
-        Escreve aqui o nome da ferramenta
-        <input
-          type="text"
-          data-testid="tool-search-input"
-          name="searchTitle"
-          value={ searchTitle }
-          onChange={ (e) => handleChangeInput(e.currentTarget.value) } />
-      </label>
-      <button
-        type="button"
-        data-testid="tool-search-button"
-        onClick={ () => handleClick(searchTitle) }
-      >
-        Buscar
-      </button>
-    </header>
-  )
-}
+    <nav data-testid="tool-search">
+      <input
+        type="text"
+        data-testid="tool-search-input"
+        name="nameTool"
+        value={nameTool}
+        placeholder="Digita o nome da ferramenta aqui"
+        onChange={(e) => setNameTool(e.currentTarget.value)}
+      />
+    </nav>
+  );
+};
 
 export default SearchBar;
