@@ -21,6 +21,10 @@ const initialValue = {
     },
   ],
   nameTool: "",
+  itemsPerPage: 0,
+  currentPage: 0,
+  pages: 0,
+  setCurrentPage: (_newState: number) => {},
   setNameTool: (_newState: string) => {},
   setTools: (_newState: ToolTypes[]) => {},
 };
