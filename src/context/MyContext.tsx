@@ -1,4 +1,5 @@
 import { createContext } from "react";
+import ToolTypes from "../types/ToolTypes";
 
 const initialValue = {
   tools: [
@@ -9,7 +10,19 @@ const initialValue = {
       icon: "",
       link: "",
     },
-  ]
+  ],
+  toolsData: [
+    {
+      app_id: "",
+      name: "",
+      color: "",
+      icon: "",
+      link: "",
+    },
+  ],
+  nameTool: "",
+  setNameTool: (_newState: string) => {},
+  setTools: (_newState: ToolTypes[]) => {},
 };
 
 const MyContext = createContext(initialValue);
