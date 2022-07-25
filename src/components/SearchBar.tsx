@@ -1,5 +1,5 @@
-import { useContext } from "react";
-import MyContext from "../context/MyContext";
+import { useContext } from 'react';
+import MyContext from '../context/MyContext';
 
 function SearchBar() {
   const { nameTool, setNameTool } = useContext(MyContext);
@@ -16,6 +16,6 @@ function SearchBar() {
       />
     </nav>
   );
-};
+}
 
 export default SearchBar;

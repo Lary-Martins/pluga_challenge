@@ -11,7 +11,7 @@ function MainHomePage() {
     <section>
       <Pagination />
       {
-        tools.map((tool: ToolTypes, _index: number) => (
+        tools.map((tool: ToolTypes) => (
           <Card {...tool} />
         ))
       }

@@ -1,4 +1,4 @@
-import ToolTypes from "./ToolTypes"
+import ToolTypes from './ToolTypes';
 
 type MyContextTypes = {
   tools: ToolTypes[],
@@ -7,8 +7,8 @@ type MyContextTypes = {
   itemsPerPage: number,
   currentPage: number,
   pages: number,
-  setTools: (newState: ToolTypes[]) => {}
-  setNameTool: (newState: string) => {},
+  setTools: (_newState: ToolTypes[]) => {}
+  setNameTool: (_newState: string) => {},
   setCurrentPage: (_newState: number) => {},
 };
 

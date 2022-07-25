@@ -1,4 +1,3 @@
-import React from 'react';
 import ToolTypes from '../types/ToolTypes';
 
 function Card(tool: ToolTypes) {

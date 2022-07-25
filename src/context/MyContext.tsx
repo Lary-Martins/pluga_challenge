@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { createContext } from 'react';
 import ToolTypes from '../types/ToolTypes';
 
@@ -24,9 +25,9 @@ const initialValue = {
   itemsPerPage: 0,
   currentPage: 0,
   pages: 0,
-  setCurrentPage: (_newState: number) => {},
-  setNameTool: (_newState: string) => {},
-  setTools: (_newState: ToolTypes[]) => {},
+  setCurrentPage: (newState: number) => {},
+  setNameTool: (newState: string) => {},
+  setTools: (newState: ToolTypes[]) => {},
 };
 
 const MyContext = createContext(initialValue);

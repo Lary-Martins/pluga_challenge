@@ -4,6 +4,6 @@ type ToolTypes = {
   color: string,
   icon: string,
   link: string,
-}
+};
 
 export default ToolTypes;
