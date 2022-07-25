@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import MyContext from "../context/MyContext";
 
-const SearchBar = () => {
+function SearchBar() {
   const { nameTool, setNameTool } = useContext(MyContext);
 
   return (

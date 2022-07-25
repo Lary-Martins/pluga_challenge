@@ -6,4 +6,4 @@ type ToolTypes = {
   link: string,
 }
 
-export default ToolTypes
+export default ToolTypes;

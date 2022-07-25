@@ -1,15 +1,17 @@
-import ToolTypes from "../types/ToolTypes"
+import ToolTypes from '../types/ToolTypes';
 
-const Card = (tool: ToolTypes) => {
+function Card(tool: ToolTypes) {
+  const { name, icon } = tool;
+
   return (
     <div data-testid="tool-card" className="tool-card">
-      <span>{tool.name}</span>
+      <span>{name}</span>
       <img
-          src={ tool.icon }
-          alt={ tool.name }
+        src={icon}
+        alt={name}
       />
     </div>
-  )
+  );
 }
 
 export default Card;

@@ -1,11 +1,11 @@
-import { useContext } from "react";
-import Card from "./Card";
-import ToolTypes from "../types/ToolTypes";
-import MyContext from "../context/MyContext";
-import Pagination from "./Pagination";
+import { useContext } from 'react';
+import Card from './Card';
+import ToolTypes from '../types/ToolTypes';
+import MyContext from '../context/MyContext';
+import Pagination from './Pagination';
 
-const MainHomePage = () => {
-  const { tools } = useContext(MyContext)
+function MainHomePage() {
+  const { tools } = useContext(MyContext);
 
   return (
     <section>
@@ -17,6 +17,6 @@ const MainHomePage = () => {
       }
     </section>
   );
-};
+}
 
 export default MainHomePage;

@@ -1,7 +1,7 @@
 import MyProvider from "./context/MyProvider";
 import RouteMap from "./routes";
 
-const App = () => {
+function App() {
   return (
     <MyProvider>
       <RouteMap />
