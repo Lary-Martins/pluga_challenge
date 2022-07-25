@@ -40,18 +40,31 @@ function MyProvider({ children }: MyProviderTypes) {
     setTools(currentItems);
   }, [currentPage, setTools, toolsData, itemsPerPage]);
 
-  const context = {
-    nameTool,
-    setNameTool,
-    tools,
-    toolsData,
-    setTools,
-    itemsPerPage,
-    currentPage,
-    setCurrentPage,
-    pages,
-  };
-  
+  const context = useMemo(
+    () => ({
+      nameTool,
+      setNameTool,
+      tools,
+      toolsData,
+      setTools,
+      itemsPerPage,
+      currentPage,
+      setCurrentPage,
+      pages,
+    }),
+    [
+      nameTool,
+      setNameTool,
+      tools,
+      toolsData,
+      setTools,
+      itemsPerPage,
+      currentPage,
+      setCurrentPage,
+      pages,
+    ],
+  );
+
   return <MyContext.Provider value={context}>{children}</MyContext.Provider>;
 }
 
