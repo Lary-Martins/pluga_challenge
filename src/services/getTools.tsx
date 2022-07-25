@@ -1,4 +1,4 @@
-import ToolTypes from "../types/ToolTypes";
+import ToolTypes from '../types/ToolTypes';
 
 const getTools = async (): Promise <ToolTypes[] | []> => {
   const result = await fetch('https://pluga.co/ferramentas_search.json')
@@ -6,6 +6,6 @@ const getTools = async (): Promise <ToolTypes[] | []> => {
     .catch((reject) => console.log(reject));
 
   return result;
-}
+};
 
 export default getTools;

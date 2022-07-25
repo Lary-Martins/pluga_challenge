@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
-import getTools from "../services/getTools";
-import MyProviderTypes from "../types/MyProviderTypes";
-import ToolTypes from "../types/ToolTypes";
-import MyContext from "./MyContext";
+import React, { useState, useEffect, useMemo } from 'react';
+import getTools from '../services/getTools';
+import MyProviderTypes from '../types/MyProviderTypes';
+import ToolTypes from '../types/ToolTypes';
+import MyContext from './MyContext';
 
 function MyProvider({ children }: MyProviderTypes) {
-  const [nameTool, setNameTool] = useState<string>("");
+  const [nameTool, setNameTool] = useState<string>('');
   const [toolsData, setToolsData] = useState<ToolTypes[] | []>([]);
   const [tools, setTools] = useState<ToolTypes[] | []>([]);
   const [currentPage, setCurrentPage] = useState<number>(0);
@@ -25,9 +25,7 @@ function MyProvider({ children }: MyProviderTypes) {
     let filteredTools = toolsData;
 
     if (nameTool.length > 0) {
-      filteredTools = filteredTools.filter((tool) =>
-        tool.name.toLowerCase().startsWith(nameTool)
-      );
+      filteredTools = filteredTools.filter((tool) => tool.name.toLowerCase().startsWith(nameTool));
     }
 
     setTools(filteredTools);
@@ -55,6 +53,6 @@ function MyProvider({ children }: MyProviderTypes) {
   };
   
   return <MyContext.Provider value={context}>{children}</MyContext.Provider>;
-};
+}
 
 export default MyProvider;

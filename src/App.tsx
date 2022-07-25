@@ -1,5 +1,5 @@
-import MyProvider from "./context/MyProvider";
-import RouteMap from "./routes";
+import MyProvider from './context/MyProvider';
+import RouteMap from './routes';
 
 function App() {
   return (
