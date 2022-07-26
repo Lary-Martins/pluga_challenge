@@ -1,46 +1,63 @@
-# Getting Started with Create React App
+# Boas vindas ao repositório do desafio Pluga
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esse projeto foi desenvolvido para uma vaga de fullstack na empresa [Pluga](https://pluga.co/)
 
-## Available Scripts
+A proposta é desenvolver uma aplicação front-end que liste, em cards, os apps integrados na Pluga.
 
-In the project directory, you can run:
+# Sumário
 
-### `npm start`
+- [Instruções](#instruções)
+- [Stack utilizada](#Stack-utilizadas)
+- [Roudmap](#Roudmap)
+- [Próximos passos](#Próximos-passos)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Instrução
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Clonando o repositório
 
-### `npm test`
+```bash
+  git clone git@github.com:Lary-Martins/pluga_challenge.git
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Acessando a pasta da aplicação
 
-### `npm run build`
+```bash
+  cd pluga_challenge
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Instalando as dependencias do projeto
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+  npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Startando o projeto
 
-### `npm run eject`
+```bash
+  npm start
+```
+## Stacks utilizadas
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Front-end:** React, TypeScript, Reat-testing-library, Fetch API, Context API
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Roadmap do desenvolvimento
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  **Requisito 1** - Desenvolver uma tela com uma listagem de cards representando os apps integrados na Pluga.
+  
+  **Requisito 2** - Implementa funcionalidade de buscar os apps listados nome.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+  **Requisito 3** - Implementar funcionalidade de paginação na aplicação.
 
-## Learn More
+  **Requisito 4** - Desenvolver uma tela com uma listagem de cards representando os apps integrados na Pluga e uma barra de busca.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  **Requisito 5** - Implementar testes da aplicação.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Próximos passos
+
+- Implementa mais testes;
+- Deployar a aplicação;
+- Implementar funcionalidade de abrir modal para visualizar um card em específico;
+- Implementa no modal uma seção "Últimas ferramentas visualizadas", mostrando as 3 últimas ferramentas visualizadas;
+
+
+
