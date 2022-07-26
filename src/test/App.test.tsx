@@ -11,6 +11,17 @@ describe('Verifica se na renderização do app contém:', () => {
     expect(allCards).toHaveLength(length);
   });
 
+  test('Cada card possui uma imagem', async () => {
+    const allCards = await screen.findAllByTestId('tool-card-img');
+
+    expect(allCards).toBeInTheDocument();
+  });
+
+  test('Cada card possui o nome do app', async () => {
+    const allCards = await screen.findAllByTestId('tool-card-name');
+
+    expect(allCards).toBeInTheDocument();
+  });
   test('Barra de busca', () => {
     const searchBar = screen.getByTestId('tool-search');
     const inputTextSearch = screen.getByTestId('tool-search-input');
