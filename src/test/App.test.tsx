@@ -1,4 +1,4 @@
-import { render, screen, } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import App from '../App';
 
 describe('Verifica se na renderização do app contém:', () => {
@@ -22,21 +22,20 @@ describe('Verifica se na renderização do app contém:', () => {
 
     expect(allCards).toBeInTheDocument();
   });
+
   test('Barra de busca', () => {
     const searchBar = screen.getByTestId('tool-search');
     const inputTextSearch = screen.getByTestId('tool-search-input');
-    const buttonSearch = screen.getByTestId('tool-search-button')
 
     expect(searchBar).toBeInTheDocument();
     expect(inputTextSearch).toBeInTheDocument();
-    expect(buttonSearch).toBeInTheDocument();
   });
 
-  test('Dois botões de paginação', () => {
-    const nextPage = screen.getByTestId('next-page');
-    const prevPage = screen.getByTestId('prev-page');
+  test('Botões de paginação', () => {
+    const buttons = screen.getAllByTestId('page-button');
+    const length = 6;
 
-    expect(nextPage).toBeInTheDocument();
-    expect(prevPage).toBeInTheDocument();
+    expect(buttons).toHaveLength(length);
+    expect(buttons).toBeInTheDocument();
   });
 });
