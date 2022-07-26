@@ -1,13 +1,15 @@
-import MainHomePage from "../components/MainHomePage";
-import SearchBar from "../components/SearchBar";
+import MainHomePage from '../components/MainHomePage';
+import Pagination from '../components/Pagination';
+import SearchBar from '../components/SearchBar';
 
-const Home = () => {
+function Home() {
   return (
     <main>
       <SearchBar />
       <MainHomePage />
+      <Pagination />
     </main>
-  )
+  );
 }
 
 export default Home;
