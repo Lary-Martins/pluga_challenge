@@ -7,6 +7,6 @@ function App() {
       <RouteMap />
     </MyProvider>
   );
-};
+}
 
 export default App;
