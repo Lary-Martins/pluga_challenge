@@ -11,7 +11,7 @@ function SearchBar() {
         data-testid="tool-search-input"
         name="nameTool"
         value={nameTool}
-        placeholder="Digita o nome da ferramenta aqui"
+        placeholder="Digita o nome da ferramenta"
         onChange={(e) => setNameTool(e.currentTarget.value)}
       />
     </nav>
